@@ -1,5 +1,64 @@
+:root {
+    --bs-success: #13786A;
+    --bs-dark: #232323;
+
+    --bs-success-rgb: 19, 120, 106;
+    --bs-dark-rgb: 35, 35, 35;
+}
+
 body {
-    font-size: 16px;
-    background-color: whitesmoke;
+    font-size: 15px;
     font-family: "Jost", "Changa", sans-serif;
+}
+
+a,
+a:hover,
+.nav-link,
+.nav-link:hover {
+    font-size: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/*  =======================================================================
+    ============    Topbar
+*/
+.topbar {
+    color: white;
+    background-color: var(--bs-dark);
+}
+
+@media (max-width: 992px) {
+    .topbar {
+        display: none;
+    }
+}
+
+.topbar-inner-content {
+    display: flex;
+    align-items: center;
+}
+
+.topbar-inner-content>div a {
+    gap: 12px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    padding: 10px 16px;
+    border-right: 1px solid #525252;
+}
+
+.topbar-inner-content>div a:hover iconify-icon {
+    color: white;
+    transition: 0.3s ease;
+}
+
+.topbar-inner-content>div iconify-icon {
+    color: green;
+}
+
+.topbar-inner-content .topbar-social {
+    display: flex;
+    align-items: center;
 }
