@@ -1,9 +1,11 @@
 :root {
-    --bs-success: #13786A;
+    --bs-success: #009688;
     --bs-dark: #232323;
 
-    --bs-success-rgb: 19, 120, 106;
+    --bs-success-rgb: 0, 150, 136;
     --bs-dark-rgb: 35, 35, 35;
+
+    --border-color: #e2e8f0;
 }
 
 body {
@@ -45,8 +47,11 @@ a:hover,
     display: flex;
     align-items: center;
     text-transform: capitalize;
-    padding: 10px 16px;
+}
+
+.topbar-inner-content>div a:not(.dropdown-item) {
     border-right: 1px solid #525252;
+    padding: 10px 16px;
 }
 
 .topbar-inner-content>div a:hover iconify-icon {
@@ -61,4 +66,40 @@ a:hover,
 .topbar-inner-content .topbar-social {
     display: flex;
     align-items: center;
+}
+
+
+/*  =======================================================================
+    ============    Bootstrap Modifications
+*/
+.dropdown {
+    cursor: pointer;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+[data-bs-toggle="dropdown"] {
+    pointer-events: none;
+}
+
+.dropdown-menu {
+    opacity: 0;
+    padding: 8px;
+    border: none;
+    display: block;
+    border-radius: 0;
+    visibility: hidden;
+    font-size: inherit;
+    transition: 0.3s ease;
+    transform: translateY(10px);
+    box-shadow: 0 10px 40px rgb(0, 0, 0, 0.08);
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: #009688;
 }

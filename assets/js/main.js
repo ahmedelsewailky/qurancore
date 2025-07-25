@@ -1,5 +1,5 @@
 $(function() {
     "use strict";
 
-    console.log("Hello! jQuery");
+    $("[data-bs-toggle=\"tooltip\"]").tooltip();
 })
