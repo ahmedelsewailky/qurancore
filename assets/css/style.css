@@ -1,10 +1,7 @@
 :root {
-    --bs-success: #009688;
+    --teal: #009688;
+    --sandrift: #C3AB6D;
     --bs-dark: #232323;
-
-    --bs-success-rgb: 0, 150, 136;
-    --bs-dark-rgb: 35, 35, 35;
-
     --border-color: #e2e8f0;
 }
 
@@ -24,10 +21,11 @@ a:hover,
 
 
 /*  =======================================================================
-    ============    Topbar
+    ============    Topbar     ============================================
 */
 .topbar {
-    color: white;
+    font-size: 14px;
+    color: rgb(207, 207, 207);
     background-color: var(--bs-dark);
 }
 
@@ -60,7 +58,7 @@ a:hover,
 }
 
 .topbar-inner-content>div iconify-icon {
-    color: green;
+    color: inherit;
 }
 
 .topbar-inner-content .topbar-social {
@@ -68,10 +66,145 @@ a:hover,
     align-items: center;
 }
 
+.topbar-search .form-control {
+    background-color: #404040;
+    border: none;
+    border-radius: 0;
+    font-size: 13px;
+    height: 42px;
+}
+
+.topbar-search form {
+    position: relative;
+}
+
+.topbar-search form .form-control::placeholder {
+    color: #b7b7b7;
+}
+
+.topbar-search form .form-control:focus {
+    background-color: #fff;
+}
+
+.topbar-search form iconify-icon {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+}
+
+.login-button {
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+}
 
 /*  =======================================================================
-    ============    Bootstrap Modifications
+    ============    Navbar    =============================================
 */
+.navbar {
+    color: white;
+    background-color: #009688;
+    padding: 32px 0;
+}
+
+.navbar-nav {
+    gap: 10px;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.navbar-nav .nav-link::before {
+    position: absolute;
+    content: '';
+    height: 2px;
+    left: 50%;
+    width: 0;
+    background-color: white;
+    transform: translateX(-50%);
+    bottom: 0;
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+    color: inherit;
+    font-weight: 600;
+}
+
+.navbar-nav .nav-link:hover::before,
+.navbar-nav .nav-link.active::before,
+.navbar-nav .nav-link.active:hover::before {
+    width: 20px;
+}
+
+.navbar-brand,
+.navbar-brand:hover {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    color: white;
+}
+
+.navbar-brand .icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #CDDC39, #4CAF50);
+    color: white;
+}
+
+/*  =======================================================================
+    ============    Hero    ===============================================
+*/
+.hero-text-content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-text-content h6 {
+    font-size: 20px;
+}
+
+.hero-text-content h2 {
+    font-size: 64px;
+    font-weight: 700;
+    font-family: serif;
+    text-transform: capitalize;
+}
+
+.hero-text-content h2 span {
+    color: var(--sandrift)
+}
+
+.hero-text-content p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+/*  =======================================================================
+    ============    Bootstrap Modifications    ============================
+*/
+.form-control:focus,
+.form-select:focus,
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Dropdown */
 .dropdown {
     cursor: pointer;
 }
@@ -87,8 +220,9 @@ a:hover,
 }
 
 .dropdown-menu {
+    width: 200px;
     opacity: 0;
-    padding: 8px;
+    padding: 0;
     border: none;
     display: block;
     border-radius: 0;
@@ -99,7 +233,88 @@ a:hover,
     box-shadow: 0 10px 40px rgb(0, 0, 0, 0.08);
 }
 
+.dropdown-item {
+    transition: 0.3s ease;
+    padding: 10px 16px;
+    border-bottom: 1px dotted #dfdfdf;
+}
+
+.dropdown-item:hover {
+    padding-left: 26px;
+}
+
 .dropdown-item.active,
 .dropdown-item:active {
     background-color: #009688;
+}
+
+/* Button */
+.btn {
+    color: inherit;
+    z-index: 1;
+    font-weight: 500;
+    position: relative;
+    border-radius: 3px;
+    text-transform: capitalize;
+}
+
+[class^="btn-"],
+[class*=" btn-"] {
+    color: white;
+}
+
+.btn-warning {
+    border-color: var(--sandrift);
+    background-color: var(--sandrift);
+    /* background: linear-gradient(45deg, var(--sandrift), #8BC34A); */
+}
+
+.btn-warning:hover {
+    color: inherit;
+    background-color: transparent;
+    border: 1px solid var(--sandrift);
+}
+
+.double-text-effect {
+    overflow: hidden;
+    padding: 12px 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.double-text-effect span {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    transition: opacity .65s, transform .85s;
+    transition-timing-function: cubic-bezier(.15, .85, .31, 1);
+}
+
+.double-text-effect span::after {
+    content: attr(data-text);
+    display: inline-block;
+    position: absolute;
+    white-space: nowrap;
+    top: 50%;
+    opacity: 0;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    transition: opacity .5s, transform .8s;
+    transition-timing-function: cubic-bezier(.15, .85, .31, 1);
+}
+
+.double-text-effect:active span::after,
+.double-text-effect:hover span::after {
+    transform: translate(-50%, 150%);
+    opacity: 1;
+}
+
+.double-text-effect:active span,
+.double-text-effect:hover span {
+    transform: translateY(-200%);
+}
+
+.btn-outline-dark {
+    color: black;
 }
