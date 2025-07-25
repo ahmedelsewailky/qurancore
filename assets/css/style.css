@@ -166,6 +166,12 @@ a:hover,
 /*  =======================================================================
     ============    Hero    ===============================================
 */
+.hero {
+    background-image: url("./../images/Mosque-backdrop-bg.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
 .hero-text-content {
     height: 100%;
     display: flex;
@@ -193,6 +199,86 @@ a:hover,
     margin-top: 10px;
 }
 
+.typer-text::after {
+    content: '|';
+    animation: blink 0.8s infinite;
+    margin-left: 2px;
+    color: #000;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/*  =======================================================================
+    ============    Features Cards    =====================================
+*/
+.features {
+    margin-top: -90px;
+    position: relative;
+}
+
+.features::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 158px;
+    background-color: #f8fafc;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.featured-card {
+    padding: 18px;
+    height: 230px;
+    display: grid;
+    text-align: center;
+    place-content: center;
+    background-color: #fff;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.featured-card .icon {
+    margin-bottom: 24px;
+}
+
+/*  =======================================================================
+    ============    Static Cards    =======================================
+*/
+.static-card {
+    padding: 24px 0;
+}
+
+.static-card .number {
+    font-size: 43px;
+    font-weight: 700;
+    color: black;
+}
+
+.static-card .number .plus {
+    font-size: 24px;
+    font-weight: 300;
+    margin-left: -7px;
+}
+
+.statistics {
+    padding: 16px 0;
+    background-color: #f8fafc;
+}
+
+.statistics p a {
+    color: var(--teal);
+    text-decoration: underline;
+}
 
 /*  =======================================================================
     ============    Bootstrap Modifications    ============================
