@@ -526,6 +526,65 @@ a:hover,
 }
 
 /*  =======================================================================
+    ============    Categories Section: Index.html     ====================
+*/
+.category-item {
+    border: 1px solid #e2e8f0;
+    padding: 32px;
+    height: 270px;
+    border-radius: 12px;
+    margin-bottom: 32px;
+    transition: 0.3s ease;
+}
+
+.category-item:hover {
+    background-color: #f1f5f9;
+    border-color: var(--sandrift);
+}
+
+.category-item img {
+    width: 64px;
+}
+
+.category-item h6 {
+    font-size: 24px;
+    margin: 16px 0;
+}
+
+.category-item p {
+    font-size: 15px;
+    text-transform: capitalize;
+    line-height: 24px;
+}
+
+.category-item a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+
+.category-item a iconify-icon {
+    color: var(--teal);
+}
+
+.category-item a:hover {
+    color: var(--teal);
+}
+
+.section.categories .section--image {
+    position: absolute;
+    top: 25%;
+    z-index: -1;
+    height: 390px;
+}
+
+.section.categories {
+    position: relative;
+}
+
+/*  =======================================================================
     ============    Bootstrap Modifications    ============================
 */
 .form-control:focus,
