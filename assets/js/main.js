@@ -56,10 +56,67 @@ $(function () {
  * This runs after the DOM has loaded and waits 300ms before starting the animation.
  */
 document.addEventListener("DOMContentLoaded", function () {
-    setTimeout(function () {
-        $(".odometer").each(function () {
-            const count = $(this).data("count");
-            $(this).html(count);
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const odometers = entry.target.querySelectorAll(".odometer");
+                odometers.forEach(odometer => {
+                    const count = odometer.dataset.count;
+                    odometer.innerHTML = count;
+                });
+                // Stop observing once animated
+                observer.unobserve(entry.target);
+            }
         });
-    }, 300);
+    }, {
+        threshold: 0.5 // Start when 50% of the element is visible
+    });
+
+    // Observe each section/card that contains odometer numbers
+    document.querySelectorAll(".static-card").forEach(card => {
+        observer.observe(card);
+    });
+});
+
+
+/**
+ * Enables parallax effect on elements with `.parallex-effect` inside `.section`.
+ * 
+ * - Moves elements on mousemove based on cursor position and `data-depth` attribute.
+ * - Resets position on mouseleave.
+ * - Ensures each section is only bound once using `data-parallax-bound`.
+ */
+document.addEventListener("DOMContentLoaded", function () {
+    const elements = document.querySelectorAll('.parallex-effect');
+
+    elements.forEach(el => {
+        const parent = el.closest('.section');
+        if (!parent) return;
+
+        if (parent.dataset.parallaxBound) return;
+        parent.dataset.parallaxBound = true;
+
+        const targets = parent.querySelectorAll('.parallex-effect');
+
+        parent.addEventListener('mousemove', function (e) {
+            const rect = parent.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const xPercent = (x / rect.width - 0.5);
+            const yPercent = (y / rect.height - 0.5);
+
+            targets.forEach(target => {
+                const depth = parseFloat(target.getAttribute('data-depth')) || 0.5;
+                const moveX = xPercent * depth * 200;
+                const moveY = yPercent * depth * 200;
+                target.style.transform = `translate(${moveX}px, ${moveY}px)`;
+            });
+        });
+
+        parent.addEventListener('mouseleave', function () {
+            targets.forEach(target => {
+                target.style.transform = `translate(0, 0)`;
+            });
+        });
+    });
 });
