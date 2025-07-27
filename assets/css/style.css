@@ -563,6 +563,8 @@ a:hover,
     gap: 10px;
     text-transform: uppercase;
     transition: 0.3s ease;
+    font-weight: 500;
+    color: var(--teal);
 }
 
 .category-item a iconify-icon {
@@ -570,7 +572,7 @@ a:hover,
 }
 
 .category-item a:hover {
-    color: var(--teal);
+    color: var(--dark-navy-blue);
 }
 
 .section.categories .section--image {
@@ -582,6 +584,275 @@ a:hover,
 
 .section.categories {
     position: relative;
+}
+
+/*  =======================================================================
+    ============    Popular Courses    ====================================
+*/
+.popular-courses {
+    background-color: #F8FAFC;
+}
+
+.popular-course-card {
+    background-color: white;
+}
+
+.popular-course-card .card-details {
+    padding: 24px;
+}
+
+.popular-course-card .card-details a {
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 29px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    text-transform: capitalize;
+    background: linear-gradient(var(--teal) 0, var(--teal) 98%);
+    background-size: 0 2px;
+    background-repeat: no-repeat;
+    background-position: left 100%;
+    transition: all .4s ease;
+    line-clamp: 2;
+}
+
+.popular-course-card .card-details a:hover {
+    background-size: 100% 2px;
+}
+
+.popular-course-card .card-details .meta-category {
+    background-color: var(--bs-success-bg-subtle);
+    font-size: 10px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 2px;
+    font-weight: 500;
+    color: var(--bs-success);
+}
+
+.star-rates {
+    position: relative;
+    width: 90px;
+    height: 16px;
+    background-image: url(./../images/shapes/stars-gray.png);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.star-rates span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-image: url(./../images/shapes/stars-fill.png);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.rate-value {
+    font-size: 12px;
+    margin-left: 12px;
+    font-weight: 500;
+}
+
+.price {
+    margin: 10px 0;
+    font-size: 25px;
+    font-weight: 700;
+    color: #F44336;
+}
+
+.price .del {
+    text-decoration: line-through;
+    font-size: 16px;
+    font-weight: 400;
+    color: gray;
+    margin-left: 5px;
+}
+
+.course-info {
+    border-top: 1px solid #d2d2d2;
+    padding-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.course-info>div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.card-thumbnail-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-thumbnail-image span {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    background-color: #ffffffd9;
+    padding: 3px 6px;
+    font-size: 12px;
+    border-radius: 4px;
+    font-weight: 500;
+    z-index: 1;
+}
+
+.card-thumbnail-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s ease;
+}
+
+.popular-course-card:hover .card-thumbnail-image img {
+    transform: rotate(5deg) scale(1.1);
+}
+
+.popular-courses .contact-info-box {
+    background-color: var(--teal);
+    padding: 24px;
+    width: 70%;
+    margin: 64px auto -185px;
+    border-radius: 500px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 140px;
+    position: relative;
+    z-index: 1;
+}
+
+.popular-courses .contact-info-box .circle-dots {
+    position: absolute;
+    left: -30px;
+    top: -30px;
+}
+
+.popular-courses .contact-info-box .circle-fill {
+    position: absolute;
+    right: -30px;
+    top: -30px;
+    z-index: -1;
+}
+
+.popular-courses .contact-info-box h6 {
+    font-weight: 300;
+}
+
+.popular-courses .contact-info-box h4 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.popular-courses .contact-info-box .or {
+    background-color: white;
+    color: black;
+    width: 64px;
+    height: 64px;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    font-size: 19px;
+    border: 2px solid #009688;
+    outline: 2px dotted #fff;
+}
+
+/*  =======================================================================
+    ============    Testimonails Section    ===============================
+*/
+.testi-section-title {
+    padding: 32px;
+    color: white;
+    border-radius: 12px;
+    background-image: url("./../images/bg410.png");
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-position: center;
+    height: 340px;
+}
+
+.testi-section-title h6 {
+    color: var(--sandrift);
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+.testi-section-title h3 {
+    font-size: 29px;
+    margin-top: 6px;
+    text-transform: capitalize;
+    margin-bottom: 54px;
+}
+
+.testi-section-title h3 span {
+    color: var(--sandrift);
+}
+
+.testi-section-title .reviews {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+}
+
+.testi-section-title .reviews span {
+    font-size: 16px;
+}
+
+.testi-section-title .reviews .star-rates {
+    margin-left: 12px;
+}
+
+.testi-card-item {
+    border: 1px solid #ddd;
+    padding: 32px;
+    border-radius: 12px;
+    position: relative;
+}
+
+.testi-card-item p {
+    margin-top: 12px;
+    margin-bottom: 32px;
+}
+
+.testi-card-item p {
+    margin-top: 20px;
+    margin-bottom: 32px;
+}
+
+.testi-card-item .author {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-top: 12px;
+    border-top: 1px solid #0000001a;
+}
+
+.testi-card-item .author .info h6 {
+    font-size: 17px;
+    margin: 0;
+}
+
+.testi-card-item iconify-icon {
+    position: absolute;
+    right: 0;
+}
+
+.testi-card-item iconify-icon {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    opacity: 0.03;
 }
 
 /*  =======================================================================
