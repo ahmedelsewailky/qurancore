@@ -779,6 +779,7 @@ a:hover,
     width: 100%;
     background-position: center;
     height: 340px;
+    margin-top: 12px;
 }
 
 .testi-section-title h6 {
@@ -855,6 +856,10 @@ a:hover,
     opacity: 0.03;
 }
 
+.owl-carousel .owl-stage-outer {
+    padding: 12px 0;
+}
+
 /*  =======================================================================
     ============    Bootstrap Modifications    ============================
 */
@@ -927,7 +932,6 @@ a:hover,
 .btn-warning {
     border-color: var(--sandrift);
     background-color: var(--sandrift);
-    /* background: linear-gradient(45deg, var(--sandrift), #8BC34A); */
 }
 
 .btn-warning:hover {

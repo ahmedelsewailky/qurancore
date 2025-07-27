@@ -127,6 +127,9 @@ $(".owl-carousel").owlCarousel({
     loop: true,
     margin: 30,
     responsiveClass: true,
+    autoplay: true,
+    autoplayTimeout: 10,
+    autoplayHoverPause: true,
     responsive: {
         0: {
             items: 1,
