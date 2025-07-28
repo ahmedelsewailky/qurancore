@@ -593,7 +593,7 @@ p {
     position: absolute;
     top: 25%;
     z-index: -1;
-    height: 390px;
+    height: 370px;
 }
 
 .section.categories {
@@ -795,6 +795,11 @@ p {
     background-position: center;
     height: 340px;
     margin-top: 12px;
+}
+
+.section.testimonails {
+    margin: 80px;
+    margin-bottom: 0;
 }
 
 .testi-section-title h6 {
@@ -1182,7 +1187,7 @@ p {
     font-size: 20px;
     text-transform: capitalize;
     font-weight: 600;
-    margin-bottom: 13px;
+    margin-bottom: 24px;
 }
 
 .footer-block.quick-links .nav-link {
@@ -1389,4 +1394,13 @@ p {
 
 .rotate {
     animation: rotateInfinite 10s linear infinite;
+}
+
+
+.modal .modal-dialog {
+    max-width: max-content;
+}
+
+.modal-backdrop {
+    --bs-backdrop-opacity: 0.85;
 }
