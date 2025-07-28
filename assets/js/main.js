@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-$(".owl-carousel").owlCarousel({
+$(".testimonails .owl-carousel").owlCarousel({
     loop: true,
     margin: 30,
     responsiveClass: true,
@@ -143,6 +143,28 @@ $(".owl-carousel").owlCarousel({
             items: 3,
             nav: false,
             loop: false
+        }
+    }
+});
+
+
+$(".team-work .owl-carousel").owlCarousel({
+    loop: true,
+    margin: 30,
+    nav: true,
+    responsiveClass: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    responsive: {
+        0: {
+            items: 1,
+        },
+        600: {
+            items: 3,
+        },
+        1000: {
+            items: 4,
         }
     }
 });

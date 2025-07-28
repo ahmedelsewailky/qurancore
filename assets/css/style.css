@@ -460,7 +460,7 @@ a:hover,
 }
 
 /*  =======================================================================
-    ============    Steps Section: Index.html    ==========================
+    ============    Index: Steps Section    ===============================
 */
 .section.steps {
     background: url("./../images/sections/steps.png");
@@ -526,7 +526,7 @@ a:hover,
 }
 
 /*  =======================================================================
-    ============    Categories Section: Index.html     ====================
+    ============    Index: Categories Section:   ==========================
 */
 .category-item {
     border: 1px solid #e2e8f0;
@@ -587,7 +587,7 @@ a:hover,
 }
 
 /*  =======================================================================
-    ============    Popular Courses    ====================================
+    ============    Index: Popular Courses    =============================
 */
 .popular-courses {
     background-color: #F8FAFC;
@@ -767,7 +767,7 @@ a:hover,
 }
 
 /*  =======================================================================
-    ============    Testimonails Section    ===============================
+    ============    Index: Testimonails Section    ========================
 */
 .testi-section-title {
     padding: 32px;
@@ -861,7 +861,7 @@ a:hover,
 }
 
 /*  =======================================================================
-    ============    Our Team Work    ======================================
+    ============    Index: Our Team Work    ===============================
 */
 .team-card {
     position: relative;
@@ -921,6 +921,116 @@ a:hover,
 
 .team-card-info .socials .social-item.instagram {
     background-color: #E4405F;
+}
+
+.owl-nav {
+    gap: 12px;
+    display: flex;
+    margin-top: 16px;
+    align-items: center;
+    justify-content: start;
+}
+
+.owl-nav button {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: inline-grid;
+    place-content: center;
+    font-size: 20px !important;
+    box-shadow: 1px 2px 0 0 var(--sandrift);
+    border: 1px solid var(--sandrift) !important;
+}
+
+.owl-nav button:hover {
+    box-shadow: none;
+    background-color: rgb(195 171 109 / 20%) !important;
+}
+
+/*  =======================================================================
+    ============    Index: Blog Section    ================================
+*/
+.blog-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.blog-card-header .author img {
+    width: 42px;
+    border-radius: 50%;
+    height: 42px;
+    object-fit: cover;
+}
+
+.blog-card-header .author {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.blog-card-header .author a {
+    font-weight: 500;
+}
+
+.blog-card-header .likes {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.blog-card-image img {
+    width: 100%;
+}
+
+.blog-card-body .date {
+    background-color: white;
+    display: inline-flex;
+    padding: 6px 12px;
+    margin-left: 16px;
+    width: 140px;
+    justify-content: center;
+    align-items: center;
+    margin-top: -32px;
+}
+
+.blog-card-body .date .day {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--sandrift);
+    position: relative;
+}
+
+.blog-card-body .date .day::after {
+    display: inline-block;
+    content: '';
+    width: 1px;
+    height: 22px;
+    background-color: #a0a0a0;
+    margin: 0 14px;
+}
+
+.blog-card-body .title {
+    font-size: 24px;
+    transition: 0.3s ease;
+    margin: 10px 0;
+}
+
+.blog-card-body .title:hover {
+    color: var(--sandrift);
+}
+
+.blog-card-body p {
+    color: gray;
+}
+
+.blog-card {
+    border-radius: 6px;
+}
+
+.blog-card-body {
+    padding: 0 16px 16px;
 }
 
 /*  =======================================================================
