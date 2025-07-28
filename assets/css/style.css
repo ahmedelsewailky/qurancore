@@ -1,5 +1,5 @@
 :root {
-    --teal: #009688;
+    --teal: #0C5D52;
     --sandrift: #C3AB6D;
     --dark-navy-blue: #0f2239;
     --bs-dark: #232323;
@@ -18,6 +18,16 @@ a:hover,
     font-size: inherit;
     color: inherit;
     text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
 }
 
 
@@ -285,7 +295,7 @@ a:hover,
     ============    Global Section Style    ===============================
 */
 .section {
-    padding: 120px 0;
+    padding: 90px 0;
 }
 
 .section.about {
@@ -459,6 +469,10 @@ a:hover,
     width: 45%;
 }
 
+.hover-underline:hover {
+    text-decoration: underline;
+}
+
 /*  =======================================================================
     ============    Index: Steps Section    ===============================
 */
@@ -591,6 +605,8 @@ a:hover,
 */
 .popular-courses {
     background-color: #F8FAFC;
+    z-index: 1;
+    position: relative;
 }
 
 .popular-course-card {
@@ -728,7 +744,6 @@ a:hover,
     justify-content: space-evenly;
     height: 140px;
     position: relative;
-    z-index: 1;
 }
 
 .popular-courses .contact-info-box .circle-dots {
@@ -948,6 +963,94 @@ a:hover,
 }
 
 /*  =======================================================================
+    ============    Index: Price Section    ===============================
+*/
+.pricing-plane {
+    background-color: #f8fafc;
+}
+
+.price-card {
+    background-color: white;
+    padding: 32px;
+    border-radius: 6px 64px 6px 6px;
+    border: 1px solid black;
+    box-shadow: 5px 5px 0 0 var(--sandrift);
+}
+
+.pricing-plane .row {
+    width: 85%;
+    margin: 64px auto 0;
+}
+
+.price-card h6 {
+    text-transform: uppercase;
+}
+
+.price-card .price span {
+    color: var(--sandrift);
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.price-card .price small {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+    display: inline-block;
+}
+
+.price-card h4 {
+    font-size: 17px;
+    margin-bottom: 16px;
+    padding: 8px;
+}
+
+.price-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 32px;
+}
+
+.price-card ul li {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 10px;
+}
+
+.price-card ul li iconify-icon {
+    color: var(--sandrift);
+}
+
+.price-card .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    background-color: transparent;
+    color: black;
+}
+
+.price-card .btn:hover {
+    background-color: var(--sandrift);
+    color: white;
+}
+
+.price-card.recommended {
+    background-color: var(--teal);
+    color: white;
+    margin-top: 16p;
+}
+
+.price-card.recommended small {
+    color: white;
+}
+
+.price-card.recommended .btn {
+    color: white;
+}
+
+/*  =======================================================================
     ============    Index: Blog Section    ================================
 */
 .blog-card-header {
@@ -1031,6 +1134,109 @@ a:hover,
 
 .blog-card-body {
     padding: 0 16px 16px;
+}
+
+/*  =======================================================================
+    ============    Footer    =============================================
+*/
+.footer {
+    color: white;
+    background-color: var(--teal);
+}
+
+.footer-inner {
+    padding: 48px 0;
+}
+
+.copy-rights {
+    padding: 16px 0;
+    background-color: #074E45;
+    text-align: center;
+}
+
+.footer-block.about p {
+    line-height: 24px;
+    margin: 24px 0;
+    width: 75%;
+}
+
+.footer-block.about .socials a {
+    display: inline-grid;
+    width: 32px;
+    height: 32px;
+    background-color: white;
+    color: var(--teal);
+    place-content: center;
+    border-radius: 50%;
+    margin-right: 6px;
+    transition: 0.3s ease;
+}
+
+.footer-block.about .socials a:hover {
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+}
+
+.footer-block h6 {
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-bottom: 13px;
+}
+
+.footer-block.quick-links .nav-link {
+    position: relative;
+    opacity: 0.75;
+}
+
+.footer-block.quick-links .nav-link:hover {
+    opacity: 1;
+}
+
+.footer-block.info span {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 3px;
+    display: block;
+}
+
+.footer-block.info p {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.footer-block.newsletter form .form-control {
+    border-radius: 2px;
+    border: none;
+    font-size: inherit;
+    padding: 12px 16px;
+    width: 100%;
+    background-color: #ffffff30;
+    margin-bottom: 6px;
+    color: white;
+}
+
+.footer-block.newsletter form {
+    position: relative;
+    width: 75%;
+    margin-top: 16px;
+}
+
+.footer-block.newsletter form button {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: rgb(255 255 255 / 50%);
+}
+
+.footer-block.newsletter form .form-control::placeholder {
+    color: rgb(255 255 255 / 50%);
+    font-weight: 300;
 }
 
 /*  =======================================================================
@@ -1169,4 +1375,18 @@ a:hover,
 
 .btn-outline-dark {
     color: black;
+}
+
+@keyframes rotateInfinite {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate {
+    animation: rotateInfinite 10s linear infinite;
 }

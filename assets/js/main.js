@@ -141,7 +141,7 @@ $(".testimonails .owl-carousel").owlCarousel({
         },
         1000: {
             items: 3,
-            nav: false,
+            nav: true,
             loop: false
         }
     }
