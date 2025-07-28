@@ -128,7 +128,7 @@ $(".testimonails .owl-carousel").owlCarousel({
     margin: 30,
     responsiveClass: true,
     autoplay: true,
-    autoplayTimeout: 10,
+    autoplayTimeout: 3000,
     autoplayHoverPause: true,
     responsive: {
         0: {

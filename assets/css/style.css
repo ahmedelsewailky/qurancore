@@ -37,7 +37,7 @@ p {
 .topbar {
     font-size: 14px;
     color: rgb(207, 207, 207);
-    background-color: var(--bs-dark);
+    background-color: var(--dark-navy-blue);
 }
 
 @media (max-width: 992px) {
@@ -59,7 +59,7 @@ p {
 }
 
 .topbar-inner-content>div a:not(.dropdown-item) {
-    border-right: 1px solid #525252;
+    border-right: 1px solid #384554;
     padding: 10px 16px;
 }
 
@@ -78,7 +78,7 @@ p {
 }
 
 .topbar-search .form-control {
-    background-color: #404040;
+    background-color: rgb(255 255 255 / 10%);
     border: none;
     border-radius: 0;
     font-size: 13px;
@@ -129,6 +129,7 @@ p {
     position: relative;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    color: white;
 }
 
 .navbar-nav .nav-link::before {
@@ -145,7 +146,7 @@ p {
 
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link.show {
-    color: inherit;
+    color: white;
     font-weight: 600;
 }
 
@@ -183,6 +184,25 @@ p {
     background-repeat: no-repeat;
 }
 
+@media (max-width: 992px) {
+    .hero {
+        padding-top: 100px;
+    }
+
+    .hero-text-content h2 {
+        font-size: 41px;
+    }
+
+    .hero-text-content h2 span {
+        display: block;
+    }
+
+    .hero img {
+        margin-top: 64px;
+        width: 100%;
+    }
+}
+
 .hero-text-content {
     height: 100%;
     display: flex;
@@ -192,6 +212,8 @@ p {
 
 .hero-text-content h6 {
     font-size: 20px;
+    margin-top: -100px;
+    margin-bottom: 16px;
 }
 
 .hero-text-content h2 {
@@ -289,6 +311,16 @@ p {
 .statistics p a {
     color: var(--teal);
     text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+    .static-card {
+        text-align: center;
+    }
+
+    .statistics p {
+        text-align: center;
+    }
 }
 
 /*  =======================================================================
@@ -473,6 +505,12 @@ p {
     text-decoration: underline;
 }
 
+@media (max-width: 992px) {
+    .section.about .section-image img {
+        width: 100%;
+    }
+}
+
 /*  =======================================================================
     ============    Index: Steps Section    ===============================
 */
@@ -480,6 +518,13 @@ p {
     background: url("./../images/sections/steps.png");
     text-align: center;
     background-size: contain;
+}
+
+@media (max-width: 992px) {
+    .section.steps {
+        background-image: none;
+        background-color: var(--sandrift);
+    }
 }
 
 .section.steps h6 {
@@ -1379,7 +1424,13 @@ p {
 }
 
 .btn-outline-dark {
-    color: black;
+    color: var(--dark-navy-blue);
+}
+
+.btn-outline-dark:hover {
+    color: white;
+    background-color: var(--dark-navy-blue);
+    border-color: var(--dark-navy-blue);
 }
 
 @keyframes rotateInfinite {

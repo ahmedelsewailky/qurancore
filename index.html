@@ -102,46 +102,53 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="quranCorePrimaryNavigateMenu">
-                        <ul class="navbar-nav ms-3 me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">About</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Our Courses
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#" class="dropdown-item">Quran Memorization</a></li>
-                                    <li><a href="#" class="dropdown-item">Tajweed Course</a></li>
-                                    <li><a href="#" class="dropdown-item">Arabic Language Course</a></li>
-                                    <li><a href="#" class="dropdown-item">General Arabic Course</a></li>
-                                    <li><a href="#" class="dropdown-item">Conversation Course</a></li>
-                                    <li><a href="#" class="dropdown-item">Islamic Studies</a></li>
-                                    <li><a href="#" class="dropdown-item">Quran Recitation</a></li>
-                                    <li><a href="#" class="dropdown-item">Ijazah program</a></li>
-                                    <li><a href="#" class="dropdown-item">Advanced Classes</a></li>
-                                    <li><a href="#" class="dropdown-item">Alimah program</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Pricing</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Blog</a>
-                            </li>
-                        </ul>
-
-                        <button type="button" class="btn btn-warning double-text-effect">
-                            <span data-text="Get Free Quote">Get Free Quote</span>
-                            <iconify-icon icon="material-symbols:arrow-right-alt-rounded" width="20"
-                                height="20"></iconify-icon>
-                        </button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="quranCorePrimaryNavigateMenu">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="quranCorePrimaryNavigateMenuLabel">Offcanvas</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav ms-3 me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">About</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Our Courses
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#" class="dropdown-item">Quran Memorization</a></li>
+                                        <li><a href="#" class="dropdown-item">Tajweed Course</a></li>
+                                        <li><a href="#" class="dropdown-item">Arabic Language Course</a></li>
+                                        <li><a href="#" class="dropdown-item">General Arabic Course</a></li>
+                                        <li><a href="#" class="dropdown-item">Conversation Course</a></li>
+                                        <li><a href="#" class="dropdown-item">Islamic Studies</a></li>
+                                        <li><a href="#" class="dropdown-item">Quran Recitation</a></li>
+                                        <li><a href="#" class="dropdown-item">Ijazah program</a></li>
+                                        <li><a href="#" class="dropdown-item">Advanced Classes</a></li>
+                                        <li><a href="#" class="dropdown-item">Alimah program</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Pricing</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Blog</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
+
+                    <button type="button" class="btn btn-warning double-text-effect">
+                        <span data-text="Get Free Quote">Get Free Quote</span>
+                        <iconify-icon icon="material-symbols:arrow-right-alt-rounded" width="20"
+                            height="20"></iconify-icon>
+                    </button>
                 </div>
             </nav><!-- ./Navbar -->
 
@@ -154,7 +161,7 @@
                             <div class="col-md-6">
                                 <div class="hero-text-content">
                                     <h6>We Are Expert Center</h6>
-                                    <h2>Best online platform for <span class="typer-text">education</span>.</h2>
+                                    <h2>Best online platform for <span class="typer-text">education</span></h2>
                                     <p>There are many variations of passages of Lorem Ipsum available, but the majority
                                         have
                                         suffered alteration in some form, by injected humour</p>
@@ -162,7 +169,8 @@
                                         <button type="button" class="btn btn-dark double-text-effect">
                                             <span data-text="Find Best Course">Find Best Courses</span>
                                         </button>
-                                        <button type="button" class="btn btn-outline-dark double-text-effect" data-bs-toggle="modal" data-bs-target="#heroVideo">
+                                        <button type="button" class="btn btn-outline-dark double-text-effect"
+                                            data-bs-toggle="modal" data-bs-target="#heroVideo">
                                             <iconify-icon icon="octicon:play-24" width="20" height="20"></iconify-icon>
                                             <span data-text="Play Video">Play Video</span>
                                         </button>
@@ -183,7 +191,7 @@
             <div class="features">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-6 col-md-3 mb-3 mb-md-0">
                             <div class="featured-card">
                                 <span class="icon">
                                     <img src="./assets/images/icons/simplified.png" alt="icon">
@@ -191,7 +199,7 @@
                                 <h5>Simplified & Translated Learning</h5>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-6 col-md-3 mb-3 mb-md-0">
                             <div class="featured-card">
                                 <span class="icon">
                                     <img src="./assets/images/icons/qualified.png" alt="icon">
@@ -199,7 +207,7 @@
                                 <h5>Qualified Instructors</h5>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-6 col-md-3 mb-3 mb-md-0">
                             <div class="featured-card">
                                 <span class="icon">
                                     <img src="./assets/images/icons/flexible.png" alt="icon">
@@ -207,7 +215,7 @@
                                 <h5>Flexible Learning Schedule</h5>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-6 col-md-3 mb-3 mb-md-0">
                             <div class="featured-card">
                                 <span class="icon">
                                     <img src="./assets/images/icons/enviroment.png" alt="icon">
@@ -224,33 +232,33 @@
             <div class="statistics py-5">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-3 text-center text-md-start">
                             <img src="./assets/images/quran.png" alt="quran icon">
                         </div>
                         <div class="col-md-9">
                             <div class="row">
-                                <div class="col-md-3">
+                                <div class="col-6 col-md-3">
                                     <div class="static-card">
                                         <span class="odometer number" data-count="12">0</span>
                                         <span class="plus">+</span>
                                         <h6>Years Of Experince</h6>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-6 col-md-3">
                                     <div class="static-card">
                                         <span class="odometer number" data-count="640">0</span>
                                         <span class="plus">+</span>
                                         <h6>Tutorials Available</h6>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-6 col-md-3">
                                     <div class="static-card">
                                         <span class="odometer number" data-count="8700">0</span>
                                         <span class="plus">+</span>
                                         <h6>Happy Student</h6>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-6 col-md-3">
                                     <div class="static-card">
                                         <span class="odometer number" data-count="4.9">0</span>/5
                                         <h6>Customer Rating</h6>
@@ -274,11 +282,12 @@
                             <div class="col-md-6">
                                 <div class="section-image">
                                     <img src="./assets/images/sections/abouts.png" alt="family section image">
-                                    <img src="./assets/images/icons/dots.png" class="float-image dots parallex-effect"
+                                    <img src="./assets/images/icons/dots.png" class="float-image dots parallex-effect d-none d-md-flex"
                                         alt="dots-image" data-depth="0.3">
                                     <img src="./assets/images/icons/circle.png"
-                                        class="float-image circle parallex-effect" alt="circle-image" data-depth="0.6">
-                                    <div class="float-video parallex-effect" data-depth="0.1" data-bs-toggle="modal" data-bs-target="#heroVideo">
+                                        class="float-image circle parallex-effect d-none d-md-flex" alt="circle-image" data-depth="0.6">
+                                    <div class="float-video parallex-effect d-none d-md-flex" data-depth="0.1" data-bs-toggle="modal"
+                                        data-bs-target="#heroVideo">
                                         <img src="./assets/images/video-thumb.png" alt="video thumbnail">
                                         <button type="button" class="play-circle">
                                             <iconify-icon icon="line-md:play-filled" width="20"
@@ -289,7 +298,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6 mt-4 mt-md-0">
                                 <div class="section-content">
                                     <div class="section-header">
                                         <h6 class="section-subtitle">About Our Center</h6>
@@ -304,7 +313,7 @@
                                             like readable English.</p>
 
                                         <div class="row mt-5">
-                                            <div class="col-md-6">
+                                            <div class="col-6">
                                                 <div class="d-flex media-object">
                                                     <div class="flex-shrink-0">
                                                         <img src="./assets/images/icons/vision.png"
@@ -316,7 +325,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-6">
+                                            <div class="col-6">
                                                 <div class="d-flex media-object">
                                                     <div class="flex-shrink-0">
                                                         <img src="./assets/images/icons/mission.png"
@@ -330,15 +339,15 @@
                                             </div>
                                         </div>
 
-                                        <div class="row mt-4">
-                                            <div class="col-md-4">
+                                        <div class="row mt-5">
+                                            <div class="col-5 col-md-4">
                                                 <a href="#" class="btn btn-dark double-text-effect">
                                                     <span data-text="Contact Us">Contact Us</span>
                                                     <iconify-icon icon="heroicons:arrow-long-right-solid" width="20"
                                                         height="20"></iconify-icon>
                                                 </a>
                                             </div>
-                                            <div class="col-md-8">
+                                            <div class="col-7 col-md-8">
                                                 <div class="d-flex media-object phone-media-object">
                                                     <div class="flex-shrink-0 icon">
                                                         <span class="icon">
@@ -441,7 +450,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 d-none d-md-block">
                                 <img src="./assets/images/sections/categories.png" class="section--image"
                                     alt="Categories Image">
                             </div>
@@ -509,7 +518,7 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-md-3">
+                            <div class="col-md-3 mb-4">
                                 <div class="popular-course-card">
                                     <div class="card-thumbnail-image">
                                         <span>3 Weeks</span>
@@ -539,7 +548,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-3 mb-4">
                                 <div class="popular-course-card">
                                     <div class="card-thumbnail-image">
                                         <span>2 Weeks</span>
@@ -569,7 +578,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-3 mb-4">
                                 <div class="popular-course-card">
                                     <div class="card-thumbnail-image">
                                         <span>6 Weeks</span>
@@ -599,7 +608,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-3 mb-4">
                                 <div class="popular-course-card">
                                     <div class="card-thumbnail-image">
                                         <span>5 Weeks</span>
@@ -631,7 +640,7 @@
                             </div>
                         </div>
 
-                        <div class="contact-info-box ">
+                        <div class="contact-info-box d-none d-md-flex">
                             <img src="./assets/images/shapes/dots-circle.png" class="circle-dots rotate"
                                 alt="circle-dots">
                             <img src="./assets/images/shapes/circle.png" class="circle-fill" alt="circle-fill">
@@ -913,7 +922,7 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-4 mb-4">
                                 <div class="price-card">
                                     <h6>Basic Plane</h6>
                                     <div class="price">
@@ -935,7 +944,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 mb-4">
                                 <div class="price-card recommended">
                                     <h6>standard Plane</h6>
                                     <div class="price">
@@ -957,7 +966,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 mb-4">
                                 <div class="price-card">
                                     <h6>Premium Plane</h6>
                                     <div class="price">
@@ -1101,7 +1110,7 @@
                 <div class="footer-inner">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-4 mb-5 mb-md-0">
                                 <div class="footer-block about">
                                     <a class="navbar-brand" href="index.html">
                                         <span class="icon"><iconify-icon icon="mdi:muslim" width="24"
@@ -1135,7 +1144,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-2">
+                            <div class="col-6 col-md-2">
                                 <div class="footer-block quick-links">
                                     <h6>Quick Links</h6>
                                     <ul class="nav flex-column">
@@ -1161,7 +1170,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-2">
+                            <div class="col-6 col-md-2">
                                 <div class="footer-block info">
                                     <h6>Need help?</h6>
 
@@ -1174,7 +1183,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-4">
+                            <div class="col-md-4 mt-5">
                                 <div class="footer-block newsletter">
                                     <h6>Subscribe our newsletter</h6>
                                     <form action="/" method="get">
