@@ -168,3 +168,35 @@ $(".team-work .owl-carousel").owlCarousel({
         }
     }
 });
+
+$(window).on("load", function () {
+    $(".preloader").fadeOut("slow");
+});
+
+AOS.init();
+
+const navbar = document.querySelector('.navbar');
+const navbarOffsetTop = navbar.offsetTop;
+let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+window.addEventListener('scroll', function () {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    // أول حاجة نثبّت النافبار لما نوصل له
+    if (scrollTop >= navbarOffsetTop) {
+        navbar.classList.add('fixed-navbar');
+    } else {
+        navbar.classList.remove('fixed-navbar', 'show-navbar'); // لو طلع لفوق قبل مكان النافبار
+    }
+
+    // بعد كده نقرر هل نظهرها ولا نخفيها بناءً على اتجاه الحركة
+    if (scrollTop < lastScrollTop) {
+        // Scroll Up → أظهر النافبار
+        navbar.classList.add('show-navbar');
+    } else {
+        // Scroll Down → اخفي النافبار
+        navbar.classList.remove('show-navbar');
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+});
