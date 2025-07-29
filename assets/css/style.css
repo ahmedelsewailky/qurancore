@@ -1408,8 +1408,6 @@ p {
     border: 1px solid var(--dark-navy-blue);
 }
 
-
-
 .double-text-effect {
     overflow: hidden;
     padding: 12px 24px;
@@ -1482,4 +1480,68 @@ p {
 
 .modal-backdrop {
     --bs-backdrop-opacity: 0.85;
+}
+
+/*  =======================================================================
+    ============    Courses Page    =======================================
+*/
+.page-header {
+    background-image: url("./../images/page-header.png");
+    height: 190px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.breadcrumb-item.active {
+    color: white;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    float: left;
+    padding-right: var(--bs-breadcrumb-item-padding-x);
+    color: white;
+    content: var(--bs-breadcrumb-divider, "/");
+}
+
+.filter-bar .inner {
+    background-color: whitesmoke;
+    padding: 16px;
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
+}
+
+.filter-bar .inner form {
+    margin-left: auto;
+    position: relative;
+}
+
+.filter-bar .inner form iconify-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    opacity: 0.15;
+}
+
+.filter-bar .inner form .form-control {
+    font-size: inherit;
+    border: none;
+    border-radius: 0;
+    width: 240px;
+}
+
+.filter-bar .inner form .form-control::placeholder {
+    color: #d0d0d0;
+}
+
+.filter-bar .inner .d-flex {
+    align-items: center;
+    gap: 6px;
 }
