@@ -239,3 +239,22 @@ $(function () {
         $("html, body").animate({ scrollTop: 0 }, 600);
     });
 });
+
+
+$(function () {
+    $("#shareLink").on("click", function () {
+        const textToCopy = $(this).val();
+        this.select();
+
+        navigator.clipboard
+            .writeText(textToCopy)
+            .then(function () {
+                $("#copyMessage")
+                    .css("display", "inline-flex")
+                    .hide()
+                    .fadeIn(200)
+                    .delay(1000)
+                    .fadeOut(200);
+            });
+    });
+});
