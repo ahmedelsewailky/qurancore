@@ -1883,3 +1883,85 @@ p {
     background-color: var(--dark-navy-blue);
     color: white;
 }
+
+.course-single-top {
+    border: 1px solid #e2e8f0;
+    padding: 24px;
+    border-radius: 12px;
+}
+
+.course-single-top .course-meta {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    gap: 24px;
+}
+
+.course-single-top .course-meta>div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.course-single-top .course-meta>div iconify-icon {
+    color: var(--sandrift);
+}
+
+.course-single-top h1 {
+    font-size: 32px;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.course-single-meta {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.course-single-meta .meta-author {
+    display: flex;
+    align-items: center;
+}
+
+.course-single-meta .meta-author img {
+    width: 38px;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+
+.course-single-meta>div {
+    border-right: 1px solid #e1e1e1;
+    padding-right: 26px;
+}
+
+.course-single-meta>div:last-of-type {
+    border: none;
+}
+
+.course-single-bottom {
+    border: none;
+    margin-top: 32px;
+    border-radius: 12px;
+}
+
+.course-single-bottom .nav-tabs .nav-item {
+    width: 25%;
+}
+
+.course-single-bottom .nav-tabs .nav-item .nav-link {
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+    background-color: #f1f5f9;
+    padding: 12px;
+}
+
+.course-single-bottom .nav-tabs .nav-item .nav-link.active {
+    background-color: var(--teal);
+    color: white;
+}
+
+.course-single-bottom .nav-tabs {
+    gap: 0px;
+}
