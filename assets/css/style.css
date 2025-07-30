@@ -1373,6 +1373,7 @@ p {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    z-index: 99999;
 }
 
 [data-bs-toggle="dropdown"] {
