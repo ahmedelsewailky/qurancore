@@ -232,10 +232,6 @@ p {
 }
 
 @media (max-width: 992px) {
-    .hero {
-        padding-top: 100px;
-    }
-
     .hero-text-content h2 {
         font-size: 30px !important;
     }
@@ -250,16 +246,22 @@ p {
     }
 
     .hero img {
-        margin-top: 64px;
         width: 100%;
     }
 }
 
 .hero-text-content {
-    height: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    height: 100%;
+}
+
+@media (max-width: 767px) {
+    .hero-text-content {
+        margin-top: 72px;
+        height: auto;
+    }
 }
 
 .hero-text-content h6 {
@@ -382,18 +384,12 @@ p {
     padding: 90px 0;
 }
 
-@media(max-width: 992px) {
-    .section {
-        padding: 40px 0;
-    }
-}
-
-.about {
+.section.about {
     position: relative;
-    padding: 140px 0;
+    padding: 90px 0;
 }
 
-.about::before {
+.section.about::before {
     content: '';
     position: absolute;
     left: 0;
@@ -402,7 +398,7 @@ p {
     display: flex;
 }
 
-.about::before {
+.section.about::before {
     top: 0;
     background: url(./../images/zigzag-gray.png);
     height: 25px;
@@ -610,6 +606,12 @@ p {
     margin: 16px auto;
 }
 
+@media (max-width: 992px) {
+    .steps-row {
+        width: 100%;
+    }
+}
+
 .steps-row::before {
     /* content: ''; */
     position: absolute;
@@ -635,20 +637,23 @@ p {
     text-shadow: 5px 4px rgb(0 0 0 / 14%);
 }
 
-.steps .col-md-4:nth-child(2) .step-card::before,
-.steps .col-md-4:nth-child(2) .step-card::after {
-    content: '';
-    position: absolute;
-    width: 100px;
-    height: 2px;
-    background-color: #000000;
-    left: -60px;
-    top: 25%;
-}
+@media (min-width: 992px) {
 
-.steps .col-md-4:nth-child(2) .step-card::after {
-    left: auto;
-    right: -60px;
+    .steps .col-md-4:nth-child(2) .step-card::before,
+    .steps .col-md-4:nth-child(2) .step-card::after {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 2px;
+        background-color: #000000;
+        left: -60px;
+        top: 25%;
+    }
+
+    .steps .col-md-4:nth-child(2) .step-card::after {
+        left: auto;
+        right: -60px;
+    }
 }
 
 /*  =======================================================================
@@ -657,7 +662,7 @@ p {
 .category-item {
     border: 1px solid #e2e8f0;
     padding: 32px;
-    height: 270px;
+    min-height: 270px;
     border-radius: 12px;
     margin-bottom: 32px;
     transition: 0.3s ease;
@@ -917,26 +922,6 @@ p {
 /*  =======================================================================
     ============    Index: Testimonails Section    ========================
 */
-.testi-section-title {
-    padding: 32px;
-    color: white;
-    border-radius: 12px;
-    background-image: url("./../images/bg410.png");
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background-position: center;
-    height: 340px;
-    margin-top: 12px;
-}
-
-@media(max-width: 992px) {
-    .testimonails {
-        margin: 0;
-        margin-bottom: 0;
-    }
-}
-
 .testi-section-title h6 {
     color: var(--sandrift);
     text-transform: uppercase;
