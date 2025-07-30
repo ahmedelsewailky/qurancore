@@ -180,53 +180,72 @@ lenis.on("scroll", (e) => {
     console.log(e); // Debug/logging purposes
 });
 
-
-
-
-
+/**
+ * Handles showing and hiding the `.navbar-scroll-show-hide` element based on scroll behavior.
+ *
+ * - When the page is scrolled to the navbar's position, it becomes "active".
+ * - Scrolling **down** hides the navbar with a CSS class `navbar-hidden` (via translateY).
+ * - Scrolling **up** shows it again by removing the class.
+ * - If the user scrolls back **above** the navbar, it resets to default (visible).
+ *
+ * This creates a sticky navbar that hides on scroll down and reveals on scroll up,
+ * without affecting other elements like `.topbar`.
+ */
 (function () {
-  const navbar = document.querySelector(".navbar-scroll-show-hide");
-  let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  let navbarReached = false;
+    const navbar = document.querySelector(".navbar-scroll-show-hide");
+    let lastScrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+    let navbarReached = false;
 
-  window.addEventListener("scroll", function () {
-    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-    const navbarTop = navbar.offsetTop;
+    window.addEventListener("scroll", function () {
+        const currentScroll =
+            window.pageYOffset || document.documentElement.scrollTop;
+        const navbarTop = navbar.offsetTop;
 
-    if (currentScroll >= navbarTop) {
-      navbarReached = true;
-    } else {
-      navbarReached = false;
-      navbar.classList.remove("navbar-hidden");
-      return;
-    }
+        if (currentScroll >= navbarTop) {
+            navbarReached = true;
+        } else {
+            navbarReached = false;
+            navbar.classList.remove("navbar-hidden");
+            return;
+        }
 
-    if (navbarReached) {
-      if (currentScroll > lastScrollTop) {
-        navbar.classList.add("navbar-hidden");
-      } else {
-        navbar.classList.remove("navbar-hidden");
-      }
-    }
+        if (navbarReached) {
+            if (currentScroll > lastScrollTop) {
+                navbar.classList.add("navbar-hidden");
+            } else {
+                navbar.classList.remove("navbar-hidden");
+            }
+        }
 
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-  });
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
 })();
 
-
+/**
+ * Displays a "Back to Top" button when the user scrolls down the page.
+ *
+ * - The button (with class `.back-to-top`) fades in after scrolling 200px down.
+ * - On click, the page scrolls smoothly to the top using jQuery's animate().
+ * - Hides again automatically when the scroll is back near the top.
+ *
+ * Requires:
+ * - jQuery library
+ * - A button element with `.back-to-top` class in HTML.
+ */
 $(function () {
-  const backToTopBtn = $('.back-to-top');
+    const backToTopBtn = $(".back-to-top");
 
-  $(window).on('scroll', function () {
-    if ($(this).scrollTop() > 200) {
-      backToTopBtn.addClass('show');
-    } else {
-      backToTopBtn.removeClass('show');
-    }
-  });
+    $(window).on("scroll", function () {
+        if ($(this).scrollTop() > 200) {
+            backToTopBtn.addClass("show");
+        } else {
+            backToTopBtn.removeClass("show");
+        }
+    });
 
-  backToTopBtn.on('click', function (e) {
-    e.preventDefault();
-    $('html, body').animate({ scrollTop: 0 }, 600);
-  });
+    backToTopBtn.on("click", function (e) {
+        e.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, 600);
+    });
 });
