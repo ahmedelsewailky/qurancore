@@ -6,6 +6,11 @@
     --border-color: #e2e8f0;
 }
 
+::selection {
+    color: white;
+    background-color: var(--sandrift);
+}
+
 body {
     font-size: 15px;
     font-family: "Jost", "Changa", sans-serif;
@@ -733,10 +738,11 @@ p {
 
 .popular-course-card .card-details {
     padding: 24px;
+    border: 1px solid #e2e8f0;
 }
 
 .popular-course-card .card-details a {
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 500;
     line-height: 29px;
     margin-top: 8px;
@@ -807,7 +813,7 @@ p {
 }
 
 .course-info {
-    border-top: 1px solid #d2d2d2;
+    border-top: 1px solid #e2e8f0;
     padding-top: 12px;
     display: flex;
     justify-content: space-between;
@@ -1532,6 +1538,17 @@ p {
     --bs-backdrop-opacity: 0.85;
 }
 
+.pagination {
+    justify-content: end;
+}
+
+.page-link,
+.page-link:hover {
+    font-size: 13px;
+    border: none;
+    color: inherit;
+}
+
 /*  =======================================================================
     ============    Courses Page    =======================================
 */
@@ -1557,22 +1574,22 @@ p {
     content: var(--bs-breadcrumb-divider, "/");
 }
 
-.filter-bar .inner {
-    background-color: whitesmoke;
-    padding: 16px;
-    margin-top: 32px;
+.preview-toolbar .inner {
+    padding: 8px 0;
     display: flex;
     align-items: center;
     gap: 20px;
     font-size: 14px;
+    margin: 32px 0;
+    border-bottom: 1px solid #e2e8f0;
 }
 
-.filter-bar .inner form {
+.preview-toolbar .inner form {
     margin-left: auto;
     position: relative;
 }
 
-.filter-bar .inner form iconify-icon {
+.preview-toolbar .inner form iconify-icon {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -1580,18 +1597,18 @@ p {
     opacity: 0.15;
 }
 
-.filter-bar .inner form .form-control {
+.preview-toolbar .inner form .form-control {
     font-size: inherit;
     border: none;
     border-radius: 0;
     width: 240px;
 }
 
-.filter-bar .inner form .form-control::placeholder {
+.preview-toolbar .inner form .form-control::placeholder {
     color: #d0d0d0;
 }
 
-.filter-bar .inner .d-flex {
+.preview-toolbar .inner .d-flex {
     align-items: center;
     gap: 6px;
 }
