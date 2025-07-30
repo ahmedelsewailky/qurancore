@@ -1,27 +1,26 @@
 /**
- * Initializes Bootstrap tooltips for all elements that have `data-bs-toggle="tooltip"`.
- * This function runs when the DOM is ready.
+ * Initialize Bootstrap tooltips on all elements with `data-bs-toggle="tooltip"`.
+ * This runs when the DOM is ready.
  */
 $(function () {
-    $("[data-bs-toggle=\"tooltip\"]").tooltip();
+    $('[data-bs-toggle="tooltip"]').tooltip();
 });
 
 /**
- * Creates a typing animation effect that cycles through a list of words.
- * The effect types out and deletes each word letter by letter inside an element with the `.typer-text` class.
- * 
- * Words include: "education", "quran", "arabic language", "tajweed".
- * The animation loops infinitely with customizable typing and deleting speeds.
+ * Typing animation that loops through a list of words.
+ * - Types and deletes each word letter by letter.
+ * - Displays animation inside an element with `.typer-text` class.
+ * - Loops infinitely through: "education", "quran", "arabic language", "tajweed".
  */
 $(function () {
     const words = ["education", "quran", "arabic language", "tajweed"];
-    let part = 0;               // Current character index
-    let wordIndex = 0;          // Index of the current word
-    let isDeleting = false;     // Whether we're deleting the text
-    const typingSpeed = 200;    // Typing speed in ms
-    const deletingSpeed = 50;   // Deleting speed in ms
-    const pauseTime = 1500;     // Pause after completing a word
-    const target = $(".typer-text"); // Target element to display typing
+    let part = 0;
+    let wordIndex = 0;
+    let isDeleting = false;
+    const typingSpeed = 200;
+    const deletingSpeed = 50;
+    const pauseTime = 1500;
+    const target = $(".typer-text");
 
     function type() {
         const currentWord = words[wordIndex];
@@ -50,153 +49,184 @@ $(function () {
 });
 
 /**
- * Triggers odometer animation for all elements with the `.odometer` class
- * by reading the value from their `data-count` attribute and updating the content.
- * 
- * This runs after the DOM has loaded and waits 300ms before starting the animation.
+ * Animate `.odometer` elements once they're visible.
+ * - Uses IntersectionObserver to detect visibility of `.static-card` elements.
+ * - Sets the text content to the value from `data-count`.
+ * - Runs after DOM load with a 300ms delay.
  */
 document.addEventListener("DOMContentLoaded", function () {
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const odometers = entry.target.querySelectorAll(".odometer");
-                odometers.forEach(odometer => {
-                    const count = odometer.dataset.count;
-                    odometer.innerHTML = count;
-                });
-                // Stop observing once animated
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.5 // Start when 50% of the element is visible
-    });
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const odometers =
+                        entry.target.querySelectorAll(".odometer");
+                    odometers.forEach((odometer) => {
+                        const count = odometer.dataset.count;
+                        odometer.innerHTML = count;
+                    });
+                    observer.unobserve(entry.target); // Run only once
+                }
+            });
+        },
+        {
+            threshold: 0.5, // Trigger when 50% visible
+        }
+    );
 
-    // Observe each section/card that contains odometer numbers
-    document.querySelectorAll(".static-card").forEach(card => {
+    document.querySelectorAll(".static-card").forEach((card) => {
         observer.observe(card);
     });
 });
 
-
 /**
- * Enables parallax effect on elements with `.parallex-effect` inside `.section`.
- * 
- * - Moves elements on mousemove based on cursor position and `data-depth` attribute.
- * - Resets position on mouseleave.
- * - Ensures each section is only bound once using `data-parallax-bound`.
+ * Parallax effect for `.parallex-effect` elements inside `.section`.
+ * - Moves elements based on mouse position and `data-depth`.
+ * - Resets transform on mouseleave.
+ * - Ensures effect is only bound once per section.
  */
 document.addEventListener("DOMContentLoaded", function () {
-    const elements = document.querySelectorAll('.parallex-effect');
+    const elements = document.querySelectorAll(".parallex-effect");
 
-    elements.forEach(el => {
-        const parent = el.closest('.section');
-        if (!parent) return;
+    elements.forEach((el) => {
+        const parent = el.closest(".section");
+        if (!parent || parent.dataset.parallaxBound) return;
 
-        if (parent.dataset.parallaxBound) return;
         parent.dataset.parallaxBound = true;
+        const targets = parent.querySelectorAll(".parallex-effect");
 
-        const targets = parent.querySelectorAll('.parallex-effect');
-
-        parent.addEventListener('mousemove', function (e) {
+        parent.addEventListener("mousemove", function (e) {
             const rect = parent.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            const xPercent = (x / rect.width - 0.5);
-            const yPercent = (y / rect.height - 0.5);
+            const xPercent = (e.clientX - rect.left) / rect.width - 0.5;
+            const yPercent = (e.clientY - rect.top) / rect.height - 0.5;
 
-            targets.forEach(target => {
-                const depth = parseFloat(target.getAttribute('data-depth')) || 0.5;
+            targets.forEach((target) => {
+                const depth =
+                    parseFloat(target.getAttribute("data-depth")) || 0.5;
                 const moveX = xPercent * depth * 200;
                 const moveY = yPercent * depth * 200;
                 target.style.transform = `translate(${moveX}px, ${moveY}px)`;
             });
         });
 
-        parent.addEventListener('mouseleave', function () {
-            targets.forEach(target => {
+        parent.addEventListener("mouseleave", function () {
+            targets.forEach((target) => {
                 target.style.transform = `translate(0, 0)`;
             });
         });
     });
 });
 
-
-
+/**
+ * Owl Carousel setup for testimonials section.
+ * - Loops through items with spacing.
+ * - Responsive for 1 or 3 items based on screen width.
+ */
 $(".testimonails .owl-carousel").owlCarousel({
     loop: true,
     margin: 30,
     responsiveClass: true,
-    autoplay: true,
+    autoplay: false,
     autoplayTimeout: 3000,
     autoplayHoverPause: true,
     responsive: {
-        0: {
-            items: 1,
-            nav: true
-        },
-        600: {
-            items: 3,
-            nav: false
-        },
-        1000: {
-            items: 3,
-            nav: true,
-            loop: false
-        }
-    }
+        0: { items: 1, nav: true },
+        600: { items: 1, nav: true },
+        1000: { items: 3, nav: true, loop: false },
+    },
 });
 
-
+/**
+ * Owl Carousel setup for team work section.
+ * - Displays 1 to 4 items depending on screen width.
+ */
 $(".team-work .owl-carousel").owlCarousel({
     loop: true,
     margin: 30,
     nav: true,
     responsiveClass: true,
-    autoplay: true,
+    autoplay: false,
     autoplayTimeout: 3000,
     autoplayHoverPause: true,
     responsive: {
-        0: {
-            items: 1,
-        },
-        600: {
-            items: 3,
-        },
-        1000: {
-            items: 4,
-        }
-    }
+        0: { items: 1 },
+        600: { items: 1 },
+        1000: { items: 4 },
+    },
 });
 
+/**
+ * Fades out preloader once window has finished loading.
+ */
 $(window).on("load", function () {
     $(".preloader").fadeOut("slow");
 });
 
+/**
+ * Initialize AOS (Animate On Scroll) plugin.
+ * - Must be included after AOS library is loaded.
+ */
 AOS.init();
 
-const navbar = document.querySelector('.navbar');
-const navbarOffsetTop = navbar.offsetTop;
-let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+/**
+ * Enable smooth scrolling with Lenis.
+ * - Logs scroll events to the console.
+ */
+const lenis = new Lenis({
+    autoRaf: true,
+});
 
-window.addEventListener('scroll', function () {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+lenis.on("scroll", (e) => {
+    console.log(e); // Debug/logging purposes
+});
 
-    // أول حاجة نثبّت النافبار لما نوصل له
-    if (scrollTop >= navbarOffsetTop) {
-        navbar.classList.add('fixed-navbar');
+
+
+
+
+(function () {
+  const navbar = document.querySelector(".navbar-scroll-show-hide");
+  let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  let navbarReached = false;
+
+  window.addEventListener("scroll", function () {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    const navbarTop = navbar.offsetTop;
+
+    if (currentScroll >= navbarTop) {
+      navbarReached = true;
     } else {
-        navbar.classList.remove('fixed-navbar', 'show-navbar'); // لو طلع لفوق قبل مكان النافبار
+      navbarReached = false;
+      navbar.classList.remove("navbar-hidden");
+      return;
     }
 
-    // بعد كده نقرر هل نظهرها ولا نخفيها بناءً على اتجاه الحركة
-    if (scrollTop < lastScrollTop) {
-        // Scroll Up → أظهر النافبار
-        navbar.classList.add('show-navbar');
-    } else {
-        // Scroll Down → اخفي النافبار
-        navbar.classList.remove('show-navbar');
+    if (navbarReached) {
+      if (currentScroll > lastScrollTop) {
+        navbar.classList.add("navbar-hidden");
+      } else {
+        navbar.classList.remove("navbar-hidden");
+      }
     }
 
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  });
+})();
+
+
+$(function () {
+  const backToTopBtn = $('.back-to-top');
+
+  $(window).on('scroll', function () {
+    if ($(this).scrollTop() > 200) {
+      backToTopBtn.addClass('show');
+    } else {
+      backToTopBtn.removeClass('show');
+    }
+  });
+
+  backToTopBtn.on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, 600);
+  });
 });

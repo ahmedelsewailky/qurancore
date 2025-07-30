@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/odometer@0.4.8/themes/odometer-theme-default.css">
     <link rel="stylesheet" href="./assets/libs/owl/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="./assets/libs/owl/assets/owl.theme.default.min.css">
-      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -34,14 +34,14 @@
             <div class="topbar">
                 <div class="container">
                     <div class="topbar-inner-content">
-                        <div class="topbar-phone-number">
+                        <div class="topbar-phone-number d-none d-md-flex">
                             <a href="tel:+201286103103" class="ps-0">
                                 <iconify-icon icon="entypo:old-phone" width="16" height="16"></iconify-icon> (+2)
                                 01286103103
                             </a>
                         </div>
 
-                        <div class="topbar-mail-address">
+                        <div class="topbar-mail-address d-none d-md-flex">
                             <a href="mailto:ahmed.elsewailky@gmail.com">
                                 <iconify-icon icon="fa:send" width="14" height="14"></iconify-icon> support@email.com
                             </a>
@@ -60,7 +60,7 @@
                             </ul>
                         </div>
 
-                        <div class="topbar-social">
+                        <div class="topbar-social d-none d-md-flex">
                             <a href="https://facebook.com/ahmedelsewailky" target="_blank" rel="noopener"
                                 data-bs-toggle="tooltip" data-bs-placement="bottom" title="facebook">
                                 <iconify-icon icon="mage:facebook" width="16" height="16"></iconify-icon>
@@ -84,7 +84,7 @@
                             <iconify-icon icon="el:user" width="15" height="15"></iconify-icon>
                         </a>
 
-                        <div class="topbar-search">
+                        <div class="topbar-search d-none d-md-flex">
                             <form action="/" method="get">
                                 <input type="text" class="form-control" placeholder="Search">
                                 <iconify-icon icon="majesticons:search-line" width="16" height="16"></iconify-icon>
@@ -96,13 +96,13 @@
 
 
             <!--    ==================================================  Navbar -->
-            <nav class="navbar navbar-expand-lg">
+            <nav class="navbar navbar-expand-lg navbar-scroll-show-hide">
                 <div class="container">
                     <a class="navbar-brand" href="index.html">
                         <span class="icon"><iconify-icon icon="mdi:muslim" width="24" height="24"></iconify-icon></span>
                         <span class="text"><strong>Quran</strong>Core</span>
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#quranCorePrimaryNavigateMenu" aria-controls="quranCorePrimaryNavigateMenu"
                         aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -174,17 +174,17 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="hero-text-content">
-                                    <h6 data-aos="fade-up" data-aos-delay="0">We Are Expert Center</h6>
-                                    <h2 data-aos="fade-up" data-aos-delay="200">Best online platform for <span class="typer-text">education</span></h2>
-                                    <p data-aos="fade-up" data-aos-delay="400">There are many variations of passages of Lorem Ipsum available, but the majority
+                                    <h6>We Are Expert Center</h6>
+                                    <h2>Best online platform for <span class="typer-text">education</span></h2>
+                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority
                                         have
                                         suffered alteration in some form, by injected humour</p>
-                                    <div class="d-flex align-items-center gap-3 mt-4">
-                                        <button type="button" class="btn btn-dark double-text-effect" data-aos="fade-up" data-aos-delay="600">
+                                    <div class="d-flex align-items-center gap-3 mt-5">
+                                        <button type="button" class="btn btn-dark double-text-effect">
                                             <span data-text="Find Best Course">Find Best Courses</span>
                                         </button>
                                         <button type="button" class="btn btn-outline-dark double-text-effect"
-                                            data-bs-toggle="modal" data-bs-target="#heroVideo" data-aos="fade-up" data-aos-delay="800">
+                                            data-bs-toggle="modal" data-bs-target="#heroVideo">
                                             <iconify-icon icon="octicon:play-24" width="20" height="20"></iconify-icon>
                                             <span data-text="Play Video">Play Video</span>
                                         </button>
@@ -205,7 +205,7 @@
             <div class="features">
                 <div class="container">
                     <div class="row">
-                        <div class="col-6 col-md-3 mb-3 mb-md-0" data-aos="fade-up" data-aos-delay="200">
+                        <div class="col-12 col-md-3 mb-3 mb-md-0">
                             <div class="featured-card">
                                 <span class="icon">
                                     <img src="./assets/images/icons/simplified.png" alt="icon">
@@ -213,7 +213,7 @@
                                 <h5>Simplified & Translated Learning</h5>
                             </div>
                         </div>
-                        <div class="col-6 col-md-3 mb-3 mb-md-0" data-aos="fade-up" data-aos-delay="400">
+                        <div class="col-12 col-md-3 mb-3 mb-md-0">
                             <div class="featured-card">
                                 <span class="icon">
                                     <img src="./assets/images/icons/qualified.png" alt="icon">
@@ -221,7 +221,7 @@
                                 <h5>Qualified Instructors</h5>
                             </div>
                         </div>
-                        <div class="col-6 col-md-3 mb-3 mb-md-0" data-aos="fade-up" data-aos-delay="600">
+                        <div class="col-12 col-md-3 mb-3 mb-md-0">
                             <div class="featured-card">
                                 <span class="icon">
                                     <img src="./assets/images/icons/flexible.png" alt="icon">
@@ -229,7 +229,7 @@
                                 <h5>Flexible Learning Schedule</h5>
                             </div>
                         </div>
-                        <div class="col-6 col-md-3 mb-3 mb-md-0" data-aos="fade-up" data-aos-delay="800">
+                        <div class="col-12 col-md-3 mb-3 mb-md-0">
                             <div class="featured-card">
                                 <span class="icon">
                                     <img src="./assets/images/icons/enviroment.png" alt="icon">
@@ -251,28 +251,28 @@
                         </div>
                         <div class="col-md-9">
                             <div class="row">
-                                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+                                <div class="col-6 col-md-3">
                                     <div class="static-card">
                                         <span class="odometer number" data-count="12">0</span>
                                         <span class="plus">+</span>
                                         <h6>Years Of Experince</h6>
                                     </div>
                                 </div>
-                                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="400">
+                                <div class="col-6 col-md-3">
                                     <div class="static-card">
                                         <span class="odometer number" data-count="640">0</span>
                                         <span class="plus">+</span>
                                         <h6>Tutorials Available</h6>
                                     </div>
                                 </div>
-                                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="600">
+                                <div class="col-6 col-md-3">
                                     <div class="static-card">
                                         <span class="odometer number" data-count="8700">0</span>
                                         <span class="plus">+</span>
                                         <h6>Happy Student</h6>
                                     </div>
                                 </div>
-                                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="800">
+                                <div class="col-6 col-md-3">
                                     <div class="static-card">
                                         <span class="odometer number" data-count="4.9">0</span>/5
                                         <h6>Customer Rating</h6>
@@ -280,7 +280,7 @@
                                 </div>
                             </div>
 
-                            <p data-aos="fade-up" data-aos-delay="1000">You have better things to do than worry about IT for your small business. <a
+                            <p>You have better things to do than worry about IT for your small business. <a
                                     href="#">Let’s Discuss about Project</a></p>
                         </div>
                     </div>
@@ -288,8 +288,8 @@
             </div><!-- ./Statistics-->
 
 
-            <!--    ==================================================  Statistics -->
-            <div class="section about crosshair">
+            <!--    ==================================================  About -->
+            <div class="section about">
                 <div class="container">
                     <div class="section-inner">
                         <div class="row">
@@ -302,7 +302,7 @@
                                     <img src="./assets/images/icons/circle.png"
                                         class="float-image circle parallex-effect d-none d-md-flex" alt="circle-image"
                                         data-depth="0.6">
-                                    <div class="float-video parallex-effect d-none d-md-flex" data-depth="0.1"
+                                    <div class="float-video parallex-effect d-none d-md-block" data-depth="0.1"
                                         data-bs-toggle="modal" data-bs-target="#heroVideo">
                                         <img src="./assets/images/video-thumb.png" alt="video thumbnail">
                                         <button type="button" class="play-circle">
@@ -317,20 +317,20 @@
                             <div class="col-md-6 mt-4 mt-md-0">
                                 <div class="section-content">
                                     <div class="section-header">
-                                        <h6 class="section-subtitle" data-aos="fade-up" data-aos-delay="0">About Our Center</h6>
-                                        <h3 class="section-title" data-aos="fade-up" data-aos-delay="200">Choose the Best Online <span>Qur’an Learning</span>
+                                        <h6 class="section-subtitle">About Our Center</h6>
+                                        <h3 class="section-title">Choose the Best Online <span>Qur’an Learning</span>
                                             Platform</h3>
                                     </div>
                                     <div class="section-text-content">
-                                        <p class="blockquote" data-aos="fade-up" data-aos-delay="400">It is a long established fact that a reader will be
+                                        <p class="blockquote">It is a long established fact that a reader will be
                                             distracted by the readable content of a page when looking at its layout. The
                                             point of using Lorem Ipsum is that it has a more-or-less normal distribution
                                             of letters, as opposed to using 'Content here, content here', making it look
                                             like readable English.</p>
 
                                         <div class="row mt-5">
-                                            <div class="col-6">
-                                                <div class="d-flex media-object" data-aos="fade-up" data-aos-delay="600">
+                                            <div class="col-12 col-md-6 mb-4 mb-md-0">
+                                                <div class="d-flex media-object">
                                                     <div class="flex-shrink-0">
                                                         <img src="./assets/images/icons/vision.png"
                                                             alt="Vision image icon">
@@ -341,8 +341,8 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-6">
-                                                <div class="d-flex media-object" data-aos="fade-up" data-aos-delay="800">
+                                            <div class="col-12 col-md-6 mb-4 mb-md-0">
+                                                <div class="d-flex media-object">
                                                     <div class="flex-shrink-0">
                                                         <img src="./assets/images/icons/mission.png"
                                                             alt="Mission image icon">
@@ -355,16 +355,16 @@
                                             </div>
                                         </div>
 
-                                        <div class="row mt-5">
-                                            <div class="col-5 col-md-4">
-                                                <a href="#" class="btn btn-dark double-text-effect" data-aos="fade-up" data-aos-delay="1000">
+                                        <div class="row mt-md-5">
+                                            <div class="col-12 col-md-4 d-none d-md-block">
+                                                <a href="#" class="btn btn-dark double-text-effect">
                                                     <span data-text="Contact Us">Contact Us</span>
                                                     <iconify-icon icon="heroicons:arrow-long-right-solid" width="20"
                                                         height="20"></iconify-icon>
                                                 </a>
                                             </div>
-                                            <div class="col-7 col-md-8">
-                                                <div class="d-flex media-object phone-media-object" data-aos="fade-up" data-aos-delay="1200">
+                                            <div class="col-12 col-md-8 order-2">
+                                                <div class="d-flex media-object phone-media-object">
                                                     <div class="flex-shrink-0 icon">
                                                         <span class="icon">
                                                             <iconify-icon icon="ic:baseline-phone" width="20"
@@ -394,7 +394,7 @@
                     <h3>Some easy steps to process!</h3>
                     <div class="steps-row">
                         <div class="row">
-                            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="col-md-4">
                                 <div class="step-card">
                                     <h2>01</h2>
                                     <h5>Find Course</h5>
@@ -402,14 +402,16 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+
+                            <div class="col-md-4">
                                 <div class="step-card">
                                     <h2>02</h2>
                                     <h5>Select Your Plane</h5>
                                     <p>Choose the perfect plan that fits your needs and unlocks full potential.</p>
                                 </div>
                             </div>
-                            <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+
+                            <div class="col-md-4">
                                 <div class="step-card">
                                     <h2>03</h2>
                                     <h5>Start Learning</h5>
@@ -428,13 +430,13 @@
                     <div class="section-inner">
                         <div class="row mb-5">
                             <div class="col-md-6">
-                                <div class="section-header" data-aos="fade-up" data-aos-delay="200">
+                                <div class="section-header">
                                     <h6 class="section-subtitle">Top Categories</h6>
                                     <h3 class="section-title">Empowering Non-Arabic Speakers with <span>the
                                             Qur’an</span></h3>
                                 </div>
                             </div>
-                            <div class="col-md-6 align-self-end" data-aos="fade-up" data-aos-delay="400">
+                            <div class="col-md-6 align-self-end">
                                 <p>Our Qur’an learning services are carefully designed to help non-Arabic speakers
                                     understand, read, and connect with the Holy Qur’an in a meaningful way. Whether you
                                     are a complete beginner or looking to improve your recitation.</p>
@@ -442,7 +444,7 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="col-md-4">
                                 <div class="category-item">
                                     <img src="./assets/images/shapes/memorization.png" alt="memorization image">
                                     <h6>Quran Memorization</h6>
@@ -454,7 +456,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                            <div class="col-md-4">
                                 <div class="category-item">
                                     <img src="./assets/images/shapes/tajweed.png" alt="Tajweed Course">
                                     <h6>Tajweed Course</h6>
@@ -466,11 +468,11 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-md-4 d-none d-md-block"  data-aos="fade-up" data-aos-delay="600">
+                            <div class="col-md-4 d-none d-md-block">
                                 <img src="./assets/images/sections/categories.png" class="section--image"
                                     alt="Categories Image">
                             </div>
-                            <div class="col-md-4" data-aos="fade-up" data-aos-delay="800">
+                            <div class="col-md-4">
                                 <div class="category-item">
                                     <img src="./assets/images/shapes/arabic.png" alt="Arabic Lang Course">
                                     <h6>Arabic Lang Course</h6>
@@ -482,7 +484,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-md-4" data-aos="fade-up" data-aos-delay="1000">
+                            <div class="col-md-4">
                                 <div class="category-item">
                                     <img src="./assets/images/shapes/Ijazah.png" alt="Recitation">
                                     <h6>Ijazah program</h6>
@@ -494,7 +496,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-md-4" data-aos="fade-up" data-aos-delay="1200">
+                            <div class="col-md-4">
                                 <div class="category-item">
                                     <img src="./assets/images/shapes/recitation.png" alt="Recitation">
                                     <h6>Recitation</h6>
@@ -516,7 +518,7 @@
             <div class="section popular-courses">
                 <div class="container">
                     <div class="section-inner">
-                        <div class="row mb-5" data-aos="fade-up" data-aos-delay="200">
+                        <div class="row mb-5">
                             <div class="col-md-6">
                                 <div class="section-header">
                                     <h6 class="section-subtitle">Popular Courses</h6>
@@ -527,14 +529,14 @@
                             <div class="col-md-6 align-self-end">
                                 <a href="#"
                                     class="d-flex align-items-center justify-content-end gap-2 hover-underline">Browse
-                                    All
-                                    Courses <iconify-icon icon="si:arrow-right-duotone" width="20"
-                                        height="20"></iconify-icon></a>
+                                    All Courses
+                                    <iconify-icon icon="si:arrow-right-duotone" width="20" height="20"></iconify-icon>
+                                </a>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+                            <div class="col-md-3 mb-4">
                                 <div class="popular-course-card">
                                     <div class="card-thumbnail-image">
                                         <span>3 Weeks</span>
@@ -564,7 +566,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="600">
+                            <div class="col-md-3 mb-4">
                                 <div class="popular-course-card">
                                     <div class="card-thumbnail-image">
                                         <span>2 Weeks</span>
@@ -594,7 +596,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="800">
+                            <div class="col-md-3 mb-4">
                                 <div class="popular-course-card">
                                     <div class="card-thumbnail-image">
                                         <span>6 Weeks</span>
@@ -624,7 +626,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="1000">
+                            <div class="col-md-3 mb-4">
                                 <div class="popular-course-card">
                                     <div class="card-thumbnail-image">
                                         <span>5 Weeks</span>
@@ -656,7 +658,7 @@
                             </div>
                         </div>
 
-                        <div class="contact-info-box d-none d-md-flex"  data-aos="fade-up" data-aos-delay="1200">
+                        <div class="contact-info-box d-none d-md-flex">
                             <img src="./assets/images/shapes/dots-circle.png" class="circle-dots rotate"
                                 alt="circle-dots">
                             <img src="./assets/images/shapes/circle.png" class="circle-fill" alt="circle-fill">
@@ -680,7 +682,7 @@
             <div class="section testimonails mt-5">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="col-md-3">
                             <div class="testi-section-title">
                                 <h6>Testimonails</h6>
                                 <h3>Latest reviews from <span>our satisfied</span> students</h3>
@@ -693,7 +695,7 @@
                             </div>
                         </div>
                         <div class="col-md-9">
-                            <div class="owl-carousel testi-carousel-area" data-aos="fade-up" data-aos-delay="400">
+                            <div class="owl-carousel testi-carousel-area">
                                 <div class="testi-card-item">
                                     <h4>Awesome Courses</h4>
                                     <div class="star-rates">
@@ -792,7 +794,7 @@
 
                         <div class="section-body">
                             <div class="owl-carousel">
-                                <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+                                <div class="team-card">
                                     <div class="team-card-image">
                                         <img src="./assets/images/poeple/poeple-1.jpg" alt="teacher-image">
                                     </div>
@@ -818,7 +820,7 @@
                                     </div>
                                 </div>
 
-                                <div class="team-card" data-aos="fade-up" data-aos-delay="400">
+                                <div class="team-card">
                                     <div class="team-card-image">
                                         <img src="./assets/images/poeple/poeple-2.jpg" alt="teacher-image">
                                     </div>
@@ -844,7 +846,7 @@
                                     </div>
                                 </div>
 
-                                <div class="team-card" data-aos="fade-up" data-aos-delay="600">
+                                <div class="team-card">
                                     <div class="team-card-image">
                                         <img src="./assets/images/poeple/poeple-3.jpg" alt="teacher-image">
                                     </div>
@@ -870,7 +872,7 @@
                                     </div>
                                 </div>
 
-                                <div class="team-card" data-aos="fade-up" data-aos-delay="800">
+                                <div class="team-card">
                                     <div class="team-card-image">
                                         <img src="./assets/images/poeple/poeple-4.jpg" alt="teacher-image">
                                     </div>
@@ -896,7 +898,7 @@
                                     </div>
                                 </div>
 
-                                <div class="team-card" data-aos="fade-up" data-aos-delay="1000">
+                                <div class="team-card">
                                     <div class="team-card-image">
                                         <img src="./assets/images/poeple/poeple-5.jpg" alt="teacher-image">
                                     </div>
@@ -938,7 +940,7 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="col-md-4 mb-4">
                                 <div class="price-card">
                                     <h6>Basic Plane</h6>
                                     <div class="price">
@@ -960,7 +962,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+                            <div class="col-md-4 mb-4">
                                 <div class="price-card recommended">
                                     <h6>standard Plane</h6>
                                     <div class="price">
@@ -982,7 +984,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="600">
+                            <div class="col-md-4 mb-4">
                                 <div class="price-card">
                                     <h6>Premium Plane</h6>
                                     <div class="price">
@@ -1020,7 +1022,7 @@
                         </div>
                         <div class="section-body">
                             <div class="row">
-                                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                                <div class="col-md-4">
                                     <div class="blog-card">
                                         <div class="blog-card-header">
                                             <div class="author">
@@ -1049,7 +1051,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                                <div class="col-md-4">
                                     <div class="blog-card">
                                         <div class="blog-card-header">
                                             <div class="author">
@@ -1078,7 +1080,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+                                <div class="col-md-4">
                                     <div class="blog-card">
                                         <div class="blog-card-header">
                                             <div class="author">
@@ -1227,7 +1229,9 @@
                 </div>
             </footer><!-- ./Footer -->
 
-
+            <a href="#" class="back-to-top" title="Back to Top">
+                <iconify-icon icon="ph:arrow-up-bold" width="20" height="20"></iconify-icon>
+            </a>
 
 
             <!-- Video at hero section -->
@@ -1262,6 +1266,7 @@
     <script src="./assets/libs/owl/owl.carousel.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.3.8/dist/lenis.min.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
 
