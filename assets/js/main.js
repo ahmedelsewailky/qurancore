@@ -163,21 +163,11 @@ $(window).on("load", function () {
 });
 
 /**
- * Initialize AOS (Animate On Scroll) plugin.
- * - Must be included after AOS library is loaded.
- */
-AOS.init();
-
-/**
  * Enable smooth scrolling with Lenis.
  * - Logs scroll events to the console.
  */
 const lenis = new Lenis({
     autoRaf: true,
-});
-
-lenis.on("scroll", (e) => {
-    console.log(e); // Debug/logging purposes
 });
 
 /**
