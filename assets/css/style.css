@@ -127,7 +127,7 @@ p {
     .navbar-scroll-show-hide {
         position: sticky;
         top: 0;
-        z-index: 9999;
+        z-index: 10;
         transition: transform 0.3s ease-in-out;
         left: 0;
         right: 0;
@@ -1550,6 +1550,10 @@ p {
     color: inherit;
 }
 
+.sticky-lg-top {
+    z-index: 9 !important;
+}
+
 /*  =======================================================================
     ============    Page Header    =======================================
 */
@@ -2113,4 +2117,90 @@ p {
 
 .course-author-box .media-body .author-meta span iconify-icon {
     color: var(--sandrift);
+}
+
+.tutor-review-summary-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.tutor-review-summary-rating .progress {
+    flex-grow: 1;
+    height: 6px;
+}
+
+.tutor-ratings {
+    display: flex;
+    align-items: center;
+    width: 48px;
+    gap: 2px;
+    font-size: 16px;
+}
+
+.tutor-review-summary-rating .progress .progress-bar {
+    background-color: var(--sandrift);
+}
+
+.tutor-ratings iconify-icon {
+    color: #ffb736;
+}
+
+.tutor-fs-6.tutor-color-secondary.tutor-individual-star-rating {
+    padding: 0 16px;
+}
+
+.tutor-review-summary-average-rating {
+    font-size: 72px;
+    font-weight: 600;
+}
+
+
+.comment-item {
+    display: flex;
+    background-color: #f8fafc;
+    padding: 32px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+
+.comment-author {
+    flex-shrink: 0;
+    margin-right: 24px;
+}
+
+.comment-author span {
+    width: 64px;
+    height: 64px;
+    place-content: center;
+    display: inline-grid;
+    background-color: var(--teal);
+    color: white;
+    font-size: 28px;
+    border-radius: 6px;
+}
+
+.comment-item p {
+    font-size: 15px;
+    margin-top: 10px;
+    line-height: 24px;
+}
+
+.comment-item .date {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+    font-size: 14px;
+    opacity: 0.65;
+}
+
+.comment-details h6 {
+    font-size: 22px;
+}
+
+@media (max-width: 768px) {
+    .comment-item {
+        display: block;
+    }
 }
