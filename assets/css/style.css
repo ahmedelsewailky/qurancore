@@ -2204,3 +2204,67 @@ p {
         display: block;
     }
 }
+
+/*  =======================================================================
+    ============    Contact Form    =======================================
+*/
+.contact-form {
+    background-color: white;
+    padding: 32px;
+    position: relative;
+}
+
+.contact-form h4 {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.contact-form h6 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.contact-form h4 {
+    margin-bottom: 10px;
+    font-size: 38px;
+    font-weight: 600;
+}
+
+.contact-form p {
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+
+.contact-form  .form-control {
+    border-radius: 0;
+    border-color: transparent;
+    font-size: inherit;
+    padding: 18px 24px;
+    width: 100%;
+}
+
+.contact-form .form-group {
+    position: relative;
+    margin-bottom: 16px;
+    border: 1px solid #e2e8f0;
+}
+
+.contact-form .form-group iconify-icon {
+    position: absolute;
+    top: 22px;
+    right: 36px;
+    opacity: 0.25;
+}
+
+.contact-form form .btn {
+    width: 100%;
+    justify-content: center;
+}
+
+.google-map-location {
+    margin-top: -200px;
+}
+
+.contact-info-details {
+    margin-top: 48px;
+}
