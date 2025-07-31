@@ -1379,6 +1379,10 @@ p {
     box-shadow: none;
 }
 
+.form-control:focus {
+    border-color: var(--sandrift) !important;
+}
+
 /* Dropdown */
 .dropdown {
     cursor: pointer;
